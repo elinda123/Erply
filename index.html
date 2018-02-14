@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Erply - Veebiarendaja proovitöö</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
     <link rel="stylesheet" href="node_modules/bulma-start/css/main.css">
-    <link rel="stylesheet/scss" href="node_modules/bulma-start/_sass/main.scss">
+    <link rel="stylesheet" href="node_modules/bulma-start/_sass/main.scss">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="node_modules/bulma-start/_javascript/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <section class="hero is-info">
@@ -32,14 +32,14 @@
                         </a>
                     </div>
                     <div class="column is-one-fifth">
-                        <a class="button is-info is-inverted is-outlined is-medium is-rounded">
+                        <a href="#signup" class="button is-info is-inverted is-outlined is-medium is-rounded">
                             SIGN UP NOW
                         </a>
                     </div>
                 </div>
                 <div class="columns">
                     <div class="column">
-                        <img src="iphone6_template2.png" alt="Phone" height="250" width="250" style="position: relative; left: 25%;">
+                        <img src="iphone6_template3.png" alt="Phone" height="507" width="250" style="position: relative; left: 25%;">
                     </div>
                     <div class="column is-half">
                         <p class="subtitle is-size-2 has-text-white">
@@ -81,7 +81,7 @@
                     <div class="column">
                     </div>
                     <div class="column has-text-centered">
-                        <img src="pic1.png">
+                        <img src="pic1.png" alt="Pic1">
                         <p class="subtitle is-size-5 has-text-grey-dark">
                             Grow customer base
                         </p>
@@ -90,7 +90,7 @@
                         </p>
                     </div>
                     <div class="column has-text-centered">
-                        <img src="pic2.png">
+                        <img src="pic2.png" alt="Pic2">
                         <p class="subtitle is-size-5 has-text-grey-dark">
                             Find who wants what
                         </p>
@@ -99,7 +99,7 @@
                         </p>
                     </div>
                     <div class="column has-text-centered">
-                        <img src="pic3.png">
+                        <img src="pic3.png" alt="Pic3">
                         <p class="subtitle is-size-5 has-text-grey-dark">
                             Target with messages
                         </p>
@@ -114,7 +114,7 @@
                     <div class="column">
                     </div>
                     <div class="column has-text-centered">
-                        <img src="pic4.png">
+                        <img src="pic4.png" alt="Pic4">
                         <p class="subtitle is-size-5 has-text-grey-dark">
                             See what works realtime
                         </p>
@@ -123,7 +123,7 @@
                         </p>
                     </div>
                     <div class="column has-text-centered">
-                        <img src="pic5.png">
+                        <img src="pic5.png" alt="Pic5">
                         <p class="subtitle is-size-5 has-text-grey-dark">
                             Automatic cleanup
                         </p>
@@ -132,7 +132,7 @@
                         </p>
                     </div>
                     <div class="column has-text-centered">
-                        <img src="pic6.png">
+                        <img src="pic6.png" alt="Pic6">
                         <p class="subtitle is-size-5 has-text-grey-dark">
                             More leads = more $
                         </p>
@@ -160,7 +160,7 @@
                     <div class="column">
                     </div>
                     <div class="column">
-                        <iframe style="position: relative; top: 0; left: 0;" src="https://player.vimeo.com/video/45941287?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="640" height="360" frameborder="0" allowfullscreen>
+                        <iframe style="position: relative; top: 0; left: 0;" src="https://player.vimeo.com/video/45941287?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" width="640" height="360" allowfullscreen>
                         </iframe>
                     </div>
                     <div class="column">
@@ -173,11 +173,10 @@
             </div>
         </div>
     </section>
-
     <section class="hero is-white">
         <div class="hero-body">
             <div class="container">
-                <div class="columns">
+                <div id="signup" class="columns">
                     <div class="column has-text-centered">
                         <p class="subtitle has-text-centered is-size-3 has-text-grey-dark">
                             Sign Up for the CMO Circle
@@ -190,23 +189,25 @@
                         </p>
                     </div>
                 </div>
+                <form name="emailForm" action="#" onsubmit="return signUpMessage()" method="post">
                 <div class="columns">
                     <div class="column">
                     </div>
-                    <div class="column has-text-centered is-one-fifth">
-                        <input class="input is-medium is-rounded" type="email" placeholder="Email 1">
-                    </div>
-                    <div class="column has-text-centered is-one-fifth">
-                        <input class="input is-medium is-rounded" type="email" placeholder="Email 2">
-                    </div>
-                    <div class="column">
-                        <a class="button is-info is-medium is-rounded">
-                            SIGN UP
-                        </a>
-                    </div>
+                        <div class="column has-text-centered is-one-fifth">
+                            <input class="input is-medium is-rounded" type="email" name="email1" placeholder="Email 1" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+                        </div>
+                        <div class="column has-text-centered is-one-fifth">
+                            <input class="input is-medium is-rounded" type="email" name="email2" placeholder="Email 2" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+                        </div>
+                        <div class="column">
+                            <button type="submit" class="button is-info is-medium is-rounded">
+                                SIGN UP
+                            </button>
+                        </div>
                     <div class="column">
                     </div>
                 </div>
+                </form>
                 <div class="columns">
                     <div class="column has-text-centered">
                         <br>

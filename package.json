@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "bulma": "^0.6.2",
-    "bulma-start": "0.0.2"
+    "bulma-start": "0.0.2",
+    "vue": "^2.5.13",
+    "vue-scrollto": "^2.8.0"
+  },
+  "devDependencies": {
+    "vueify": "^9.4.1"
   }
 }
